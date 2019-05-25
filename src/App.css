@@ -1,3 +1,62 @@
-.App {
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+html, body, #root, .Line {
+  height: 100%;
+}
+
+body {
+  background-color: orange;
+  color: whitesmoke;
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  padding: 0;
+}
+
+.Hours, .Minutes, .Seconds, .Parts {
+  width: 20%;
   text-align: center;
+  padding: 3% 0 3% 0;
+  border-radius: 15px;
+  border: 1px solid whitesmoke;
+}
+
+.Hours {
+  background-color: darkcyan;
+}
+
+.Minutes {
+  background-color: blueviolet;
+}
+
+.Seconds {
+  background-color: brown;
+}
+
+.Parts {
+  background-color: black;
+}
+
+.Line {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;        
+}
+
+@media only screen and (max-height: 570px) {
+  .Hours, .Minutes, .Seconds, .Parts {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (min-height: 571px) and (max-height: 850px) {
+  .Hours, .Minutes, .Seconds, .Parts {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-height: 851px) {
+  .Hours, .Minutes, .Seconds, .Parts {
+    font-size: 5em;
+  }
 }
