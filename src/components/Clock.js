@@ -54,10 +54,17 @@ class Clock extends Component {
         return before + num
     }
 
+    convertHour(hour) {
+        if (hour !== 12) {
+            hour %= 12
+        }
+        return this.inTwoDigits(hour)
+    }
+
     render() {
         return (
             <div className='Line'>
-                <Block className='Hours'>{this.inTwoDigits(this.state.hours % 12)}</Block>
+                <Block className='Hours'>{this.convertHour(this.state.hours)}</Block>
                 <Block className='Minutes'>{this.inTwoDigits(this.state.minutes)}</Block>
                 <Block className='Seconds'>{this.inTwoDigits(this.state.seconds)}</Block>
                 <Block className='Parts'>{this.state.parts}</Block>
